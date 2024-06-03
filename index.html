@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>pepsi</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <section class="all">
+            <header>
+                  <a href="#" class="logo"><img src="imgs/logo.png" alt="logo"></a>
+                  <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#projict">projict</a></li>
+                        <li><a href="#a contact">a contact</a></li>
+                  </ul>
+            </header>
+            <div class="content">
+                  <div class="text">
+                  <h2>That's what <br><span>I like</span></h2>
+                  <p>
+                        Pepsi is a carbonated soft drink produced by PepsiCo, originally created by Caleb Bradham 
+                        in 1893 as "Brad's Drink" and renamed Pepsi-Cola in 1898. It is known for its sweet, caramel-like
+                        flavor with a hint of citrus. Pepsi competes primarily with Coca-Cola and has various versions 
+                        like Diet Pepsi and Pepsi Max. PepsiCo also produces a wide range of other beverages and snacks.
+                  </p>
+                  <a href="#">view all Products</a>
+                  </div>
+                  <div class="imgbox">
+                        <img src="imgs/pepsi001.png" class="pimg">
+                       
+                  </div>
+            </div>
+            <ul class="thumb">
+                        <li><img src="imgs/pepsi001.png" onclick="l('imgs/pepsi001.png');color('rgb(0 73 153)')"></li>
+                        <li><img src="imgs/pepsi002.png" onclick="l('imgs/pepsi002.png');color('rgb(102 102 102)')"></li>
+                        <li><img src="imgs/pepsi003.png" onclick="l('imgs/pepsi003.png');color('#0d1012')"></li>
+            </ul>
+            <ul class="csi">
+                  
+                  <li><a href="#"><img src="imgs/facebook (1).png"></a></li>
+                  <li><a href="#"><img src="imgs/instagram (1).png"></a></li>
+                  <li><a href="#"><img src="imgs/twitter.png"></a></li>
+            
+            </ul>
+      </section>      
+</body>
+<script src="https://unpkg.com/scrollreveal"></script> 
+<script>
+      function l(k){
+            console.log(k)
+            document.querySelector(".pimg").src = k;
+      }
+      function color(color){
+            const sec = document.querySelector(".all")
+            sec.style.background = color;
+      }
+      const scrollrevealOp = {
+            distance:"50px",
+            origin:"bottom",
+            duration:1000,
+      };
+      ScrollReveal().reveal(".all header",{
+            ...scrollrevealOp,
+      })
+      ScrollReveal().reveal(".all .content h2",{
+            ...scrollrevealOp,
+            delay:500,
+      })
+      
+            ScrollReveal().reveal(".all .content p",{
+                  ...scrollrevealOp,
+                  delay:700,
+            })
+            ScrollReveal().reveal(".all .content a",{
+                  ...scrollrevealOp,
+                  delay:900,
+            })
+            ScrollReveal().reveal(".all .content .imgbox",{
+                  ...scrollrevealOp,
+                  delay:1000,
+            })
+            ScrollReveal().reveal(".all .thumb",{
+                  ...scrollrevealOp,
+                  delay:1400,
+            })
+            ScrollReveal().reveal(".all .csi",{
+                  ...scrollrevealOp,
+                  delay:1600,
+            })
+   
+</script>
+</html>
